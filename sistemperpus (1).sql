@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2021 at 03:29 AM
+-- Generation Time: Nov 16, 2021 at 02:40 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -209,7 +209,8 @@ INSERT INTO `tb_transaksi` (`id`, `judul`, `nis`, `nama`, `tanggal_pinjam`, `tan
 (233, ' 41 Script PHP Siap Pakai', '180810', 'Yoga Widianto', '2021-08-30', '2021-09-20', '0 ', '0', 'Lunas'),
 (234, 'Hackintosh: Jalankan Mac Os X', '190701', 'Dadi Setiadi1', '2021-08-31', '2021-09-07', '0 ', '0', 'Hilang'),
 (235, ' 41 Script PHP Siap Pakai', '180810', 'Yoga Widianto', '2021-09-04', '2021-09-11', NULL, NULL, 'Pinjam'),
-(257, ' 41 Script PHP Siap Pakai', '2016210001', 'LAODE MUH ZULFARDINSYAH', '2021-09-26', '2021-10-03', NULL, NULL, 'Belum diambil');
+(257, ' 41 Script PHP Siap Pakai', '2016210001', 'LAODE MUH ZULFARDINSYAH', '2021-09-26', '2021-10-03', NULL, NULL, 'Belum diambil'),
+(258, ' 41 Script PHP Siap Pakai', '180810', 'Yoga Widianto', '2021-11-13', '2021-11-20', NULL, NULL, 'Belum diambil');
 
 --
 -- Indexes for dumped tables
@@ -295,7 +296,7 @@ ALTER TABLE `tb_pengguna`
 -- AUTO_INCREMENT for table `tb_transaksi`
 --
 ALTER TABLE `tb_transaksi`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
