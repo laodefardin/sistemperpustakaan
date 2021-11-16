@@ -7,7 +7,7 @@ include '../koneksi.php';
 include "../admin/function.php";
 if (!isset($_SESSION["username"])){
 //   echo "<script> document.location.href='../index'; </script>";
-  echo "<script> alert('anda tidak memiliki akses untuk halaman ini!, Silahkan Login terlebih dahulu atau mendaftar di petugas perpustakan');window.location= '../index';</script>";
+  echo "<script> alert('anda tidak memiliki akses untuk halaman ini Sebagai Guru!, Silahkan Login terlebih dahulu atau mendaftar di petugas perpustakan');window.location= '../index';</script>";
 }
 
 $user = $_SESSION['username'];
@@ -20,8 +20,8 @@ $row = $query->fetch_array();
 if ($level === "Admin"){
   echo "<script> document.location.href='../admin/index'; </script>";
   // echo "<script> alert('anda tidak memiliki akses untuk halaman ini!');window.location= '../user/index';</script>";
-}elseif ($level === "Guru") {
-    echo "<script> document.location.href='../guru/index'; </script>";
+}elseif($level === "Siswa"){
+    echo "<script> document.location.href='../user/index'; </script>";
 }
 ?>
 <html lang="en">
@@ -85,7 +85,7 @@ if ($level === "Admin"){
                     <!-- Messages Dropdown Menu -->
                     <li class="nav-item dropdown">
                     <li class="nav-item">
-                    <span class="btn btn-info btn-sm"><?= $_SESSION["nama"]  ?></span>  <a href="../logout" class="btn btn-danger btn-sm" class="nav-link">Logout</a>
+                    <span class="btn btn-info btn-sm"><?= $_SESSION["nama"]  ?> - Guru <?= $_SESSION["username"] ?></span>  <a href="../logout" class="btn btn-danger btn-sm" class="nav-link">Logout</a>
                     </li>
                     </li>
                 </ul>

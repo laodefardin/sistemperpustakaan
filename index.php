@@ -40,11 +40,11 @@ $akun = $sql->fetch_assoc();
     $level = $akun["level"];
     if($level === 'Siswa'){
         echo "<script> document.location.href='user/index'; </script>";
+    }elseif($level === 'Guru'){
+        echo "<script> document.location.href='guru/index'; </script>";
     }else{
         echo "<script> document.location.href='admin/index'; </script>";
     }
-
-
 }else{
     $_SESSION['pesan'] = '<div class="alert alert-danger alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

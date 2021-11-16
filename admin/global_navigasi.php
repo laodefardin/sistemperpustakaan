@@ -12,9 +12,9 @@
         </li>
         <!-- <li class="nav-header">Pilih Menu</li> -->
         <li
-            class="nav-item has-treeview <?php if($halaman == 'buku' OR $halaman == 'Edit Buku' OR $halaman == 'Edit Anggota' OR $halaman == 'anggota' OR $halaman == 'Tambah Anggota' OR $halaman == 'lokasi buku' OR $halaman == 'Tambah Lokasi Buku' OR $halaman == 'Edit Lokasi Buku' OR $halaman == 'Update Denda' OR $halaman == 'Edit Denda') echo 'menu-open'?>">
+            class="nav-item has-treeview <?php if($halaman == 'buku' OR $halaman == 'Edit Buku' OR $halaman == 'Edit Anggota' OR $halaman == 'anggota' OR $halaman == 'Tambah Anggota' OR $halaman == 'lokasi buku' OR $halaman == 'Tambah Lokasi Buku' OR $halaman == 'Edit Lokasi Buku' OR $halaman == 'Update Denda' OR $halaman == 'Edit Denda' OR $halaman == 'guru' OR $halaman == 'Tambah Guru' OR $halaman == 'Edit Guru') echo 'menu-open'?>">
             <a href="#"
-                class="nav-link <?php if($halaman == 'buku' OR $halaman == 'Edit Buku' OR $halaman == 'Edit Anggota' OR $halaman == 'anggota' OR $halaman == 'Tambah Anggota' OR $halaman == 'lokasi buku' OR $halaman == 'Tambah Lokasi Buku' OR $halaman == 'Edit Lokasi Buku' OR $halaman == 'Update Denda' OR $halaman == 'Edit Denda') echo "active" ?>">
+                class="nav-link <?php if($halaman == 'buku' OR $halaman == 'Edit Buku' OR $halaman == 'Edit Anggota' OR $halaman == 'anggota' OR $halaman == 'Tambah Anggota' OR $halaman == 'lokasi buku' OR $halaman == 'Tambah Lokasi Buku' OR $halaman == 'Edit Lokasi Buku' OR $halaman == 'Update Denda' OR $halaman == 'Edit Denda' OR $halaman == 'guru' OR $halaman == 'Tambah Guru' OR $halaman == 'Edit Guru') echo "active" ?>">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
                     Data Master
@@ -32,6 +32,11 @@
                         class="nav-link <?php if($halaman == 'anggota' OR $halaman == 'Edit Anggota' OR $halaman == 'anggota' OR $halaman == 'Tambah Anggota') echo "active" ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Anggota</p>
+                    </a>
+                    <a href="guru"
+                        class="nav-link <?php if($halaman == 'guru' OR $halaman == 'Edit Guru' OR $halaman == 'guru' OR $halaman == 'Tambah Guru') echo "active" ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Data Guru</p>
                     </a>
                     <a href="lokasibuku"
                         class="nav-link <?php if($halaman == 'Tambah Lokasi Buku' OR $halaman == 'lokasi buku' OR $halaman == 'Edit Lokasi Buku') echo "active" ?>">

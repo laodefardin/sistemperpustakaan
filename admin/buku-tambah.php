@@ -127,7 +127,7 @@ $level = $_SESSION['level'];
                     }
                 }else{
                 if (move_uploaded_file($tmp, $path)){
-                    echo $query = 'INSERT INTO tb_buku (judul, pengarang, penerbit, tahun_terbit, isbn, jumlah_buku, lokasi, tanggal_input, gambar) VALUES ("'.$judul.'","'.$pengarang.'","'.$penerbit.'", "'.$tahun.'","'.$isbn.'","'.$jumlah.'","'.$lokasi.'","'.$tanggal.'","'.$gambar_baru.'")';
+                    $query = 'INSERT INTO tb_buku (judul, pengarang, penerbit, tahun_terbit, isbn, jumlah_buku, lokasi, tanggal_input, gambar) VALUES ("'.$judul.'","'.$pengarang.'","'.$penerbit.'", "'.$tahun.'","'.$isbn.'","'.$jumlah.'","'.$lokasi.'","'.$tanggal.'","'.$gambar_baru.'")';
                     $proses = $koneksi->query($query);
                     if ($proses){
                         $_SESSION['pesan'] = 'Tambah';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2021 at 10:56 AM
+-- Generation Time: Nov 11, 2021 at 03:29 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -43,8 +43,7 @@ CREATE TABLE `tb_anggota` (
 INSERT INTO `tb_anggota` (`nis`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas`) VALUES
 (180810, 'Yoga Widianto', 'Tegal', '1997-03-19', 'Laki-laki', '8B1'),
 (190701, 'Dadi Setiadi1', 'Tegal', '1997-11-16', 'Laki-laki', '7A'),
-(190702, 'Annisavira', 'Tegal', '1998-02-23', 'Perempuan', '7A'),
-(190704, 'Tyas Sekar', 'Pemalang', '1998-06-16', 'Perempuan', '7C');
+(190702, 'Annisavira', 'Tegal', '1998-02-23', 'Perempuan', '7A');
 
 -- --------------------------------------------------------
 
@@ -102,6 +101,28 @@ INSERT INTO `tb_denda` (`id`, `denda`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_guru`
+--
+
+CREATE TABLE `tb_guru` (
+  `id` int(11) NOT NULL,
+  `id_guru` int(11) NOT NULL,
+  `namalengkap` varchar(100) NOT NULL,
+  `telp` varchar(100) NOT NULL,
+  `gambar` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_guru`
+--
+
+INSERT INTO `tb_guru` (`id`, `id_guru`, `namalengkap`, `telp`, `gambar`) VALUES
+(10, 5272, 'SUHERMAN S', '082393448980', ''),
+(11, 9289, 'SUHERMAN', '082393448980', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_lokasibuku`
 --
 
@@ -143,10 +164,11 @@ CREATE TABLE `tb_pengguna` (
 
 INSERT INTO `tb_pengguna` (`id`, `nis`, `username`, `nama`, `password`, `level`, `foto`) VALUES
 (1, '', 'admin', 'Laode Fardin', '66b65567cedbc743bda3417fb813b9ba', 'Admin', '04092021150150user-icon_126283-435.jpg'),
-(3, '180810', 'fardin2', 'Yoga Widianto', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', ''),
-(4, '190701', 'Dadi Setiadi', 'Dadi Setiadi1', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', ''),
-(5, '190702', 'fardin3', 'Annisavira', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', ''),
-(6, '190704', 'fardin4', 'Tyas Sekar', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', '');
+(2, '180810', 'siswa', 'Yoga Widianto', '878c109bd30efb8b1f72296c8a03e165', 'Siswa', ''),
+(3, '190701', 'Dadi Setiadi', 'Dadi Setiadi1', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', ''),
+(4, '190702', 'fardin3', 'Annisavira', '96de4eceb9a0c2b9b52c0b618819821b', 'Siswa', ''),
+(10, '5272', 'guru', 'SUHERMAN', '3c14e8613538caa3f34c6879fdf70da1', 'Guru', ''),
+(11, '9289', '2', 'SUHERMAN', 'b3063f8c0b04435ed2b10a4d9cf1efa5', 'Guru', '');
 
 -- --------------------------------------------------------
 
@@ -212,6 +234,12 @@ ALTER TABLE `tb_denda`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_lokasibuku`
 --
 ALTER TABLE `tb_lokasibuku`
@@ -246,6 +274,12 @@ ALTER TABLE `tb_denda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `tb_lokasibuku`
 --
 ALTER TABLE `tb_lokasibuku`
@@ -255,7 +289,7 @@ ALTER TABLE `tb_lokasibuku`
 -- AUTO_INCREMENT for table `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180816;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_transaksi`

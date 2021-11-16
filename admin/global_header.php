@@ -19,6 +19,8 @@ $row = $query->fetch_array();
 if ($level === "Siswa"){
   echo "<script> document.location.href='../user/index'; </script>";
   // echo "<script> alert('anda tidak memiliki akses untuk halaman ini!');window.location= '../user/index';</script>";
+}elseif($level === "Guru"){
+    echo "<script> document.location.href='../guru/index'; </script>";
 }
 ?>
 <!DOCTYPE html>

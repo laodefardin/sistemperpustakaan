@@ -1,5 +1,5 @@
 <?php 
-$halaman = 'Edit Anggota';
+$halaman = 'Edit Guru';
 include "global_header.php"; ?>
 
 <!-- Main content -->
@@ -10,7 +10,7 @@ include "global_header.php"; ?>
             <div class="col-lg-12">
 
                 <div class="card">
-                    <div class="card-header">Edit Anggota</div>
+                    <div class="card-header">Edit Guru</div>
                     <div class="card-body">
                         <?php
                     $query = $koneksi->query("SELECT * FROM tb_pengguna WHERE nis = '$_GET[id]'");
@@ -67,7 +67,7 @@ $id = $_GET['id'];
     $sql = mysqli_query($koneksi, $update) or die(mysqli_error($koneksi));
     
     $_SESSION['pesan'] = 'Ubah';
-    echo "<script> document.location.href='./anggota';</script>";
+    echo "<script> document.location.href='./guru';</script>";
             }
 ?>
 
